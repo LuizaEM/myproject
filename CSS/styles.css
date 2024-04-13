@@ -1,0 +1,84 @@
+/* Stiluri generale */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.topbar {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #eee;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+/* Stiluri pentru .hero */
+.hero {
+    height: 100vh; /* Înălțimea completă a viewport-ului */
+    background-image: url('logo.webp'); /* Utilizați calea corectă către imaginea dvs. */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+
+}
+
+.hero-content {
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* Media Queries pentru responsive design */
+@media (max-width: 768px) {
+    .hero-content {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .topbar {
+        animation: scrollText 10s linear infinite;
+    }
+
+    header {
+        flex-direction: column;
+    }
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
